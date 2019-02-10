@@ -2,24 +2,26 @@ EAGLE AutoRouter Statistics:
 
 Job           : G:/live_wire_27_7_18/prototypes/balti/board design and codes git repo/eagle files/board design.brd
 
-Start at      : 20:38:53 (05/02/2019)
-End at        : 20:38:59 (05/02/2019)
-Elapsed time  : 00:00:04
+Start at      : 13:41:07 (10/02/2019)
+End at        : 13:41:22 (10/02/2019)
+Elapsed time  : 00:00:13
 
-Signals       :    40   RoutingGrid: 25 mil  Layers: 2
-Connections   :    78   predefined:  0 ( 0 Vias )
+Signals       :    40   RoutingGrid: 12.5 mil  Layers: 1
+Connections   :    76   predefined:  0 ( 0 Vias )
 
-Router memory :   314412
+Router memory :   216340
 
-Passname          :    Busses     Route Optimize1 Optimize2 Optimize3 Optimize4
+Job has been interrupted!
 
-Time per pass     :  00:00:00  00:00:02  00:00:00  00:00:01  00:00:01  00:00:00
-Number of Ripups  :         0         0         0         0         0         0
-max. Level        :         0         1         0         0         0         0
-max. Total        :         0         0         0         0         0         0
+Passname          :     Route
 
-Routed            :        16        76        76        76        76        76
-Vias              :         0        31         2         0         0         0
-Resolution        :    20.5 %    97.4 %    97.4 %    97.4 %    97.4 %    97.4 %
+Time per pass     :  00:00:13
+Number of Ripups  :       102
+max. Level        :         6
+max. Total        :        27
+
+Routed            :        72
+Vias              :         0
+Resolution        :    94.7 %
 
 Final             : 
