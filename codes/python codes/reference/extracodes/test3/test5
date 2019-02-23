@@ -1,0 +1,26 @@
+from visual import *
+from random import random
+import serial
+import time
+
+arduinoSerialData = serial.Serial('com12', 115200, timeout=.1)
+time.sleep(2)
+
+
+while (1 == 1):
+    rate(7000)
+    if (arduinoSerialData.inWaiting() > 0):
+        myData = arduinoSerialData.readline()  # Remember to split the line of text into an array at the commas
+        datanums = myData.split(',')
+        lidar = float(datanums[0])
+        stepper = float(datanums[1])
+        servo  = float(datanums[2])
+        rank = float(datanums[3])
+        print myData
+        print lidar
+        print stepper
+        print servo
+        print rank
+
+
+
