@@ -14095,7 +14095,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <instance part="IC1" gate="A1" x="-25.4" y="104.14"/>
 <instance part="C3" gate="G$1" x="-10.16" y="101.6"/>
 <instance part="C4" gate="G$1" x="-40.64" y="101.6"/>
-<instance part="12V_INPUT1" gate="G$1" x="-60.96" y="101.6" rot="R180"/>
+<instance part="12V_INPUT1" gate="G$1" x="-63.5" y="101.6" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -14433,7 +14433,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <pinref part="C4" gate="G$1" pin="+"/>
 <wire x1="-35.56" y1="104.14" x2="-40.64" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="12V_INPUT1" gate="G$1" pin="2"/>
-<wire x1="-58.42" y1="101.6" x2="-48.26" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="101.6" x2="-48.26" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="101.6" x2="-48.26" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="104.14" x2="-40.64" y2="104.14" width="0.1524" layer="91"/>
 </segment>
@@ -14518,7 +14518,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <wire x1="-48.26" y1="96.52" x2="-40.64" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="99.06" x2="-48.26" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="12V_INPUT1" gate="G$1" pin="1"/>
-<wire x1="-58.42" y1="99.06" x2="-48.26" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="99.06" x2="-48.26" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="A1" pin="GND"/>
 <wire x1="-25.4" y1="96.52" x2="-40.64" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="96.52" x2="-25.4" y2="96.52" width="0.1524" layer="91"/>
