@@ -8,32 +8,30 @@
 #define servoPin2 10
 #define servoPin3 11
 
-int pos1 = 0;
-int pos2 = 0;
-int pos3 = 0;
 Servo servo1;
 Servo servo2;
 Servo servo3;
 
 void setup()
 {
-servo1.attach(servoPin1);
-servo2.attach(servoPin2);
-servo3.attach(servoPin3);
-
+	servo1.attach(servoPin1);
+	servo2.attach(servoPin2);
+	servo3.attach(servoPin3);
+    Serial.begin(9600);	
 }
 
 
 // function for the servo
 
-void baltiServo()
+int baltiServo(int pos1, int pos2 ,int pos3)
 {
-    servo1.write(pos1);
-    servo2.write(pos2);
-    servo3.write(pos3);
+	servo1.write(pos1);
+	servo2.write(pos2);
+	servo3.write(pos3);
+	return 0;
 }
 
 void loop()
 {
-baltiServo();
+	baltiServo(90,30,10);
 }
