@@ -21,17 +21,13 @@ void setup()
 }
 
 
-// function for the servo
 
-int baltiServo(int pos1, int pos2 ,int pos3)
-{
 	servo1.write(pos1);
 	servo2.write(pos2);
 	servo3.write(pos3);
-	return 0;
-}
+	
 
 void loop()
 {
-	baltiServo(90,30,10);
+
 }
