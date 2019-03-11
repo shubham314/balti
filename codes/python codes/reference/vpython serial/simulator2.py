@@ -1,3 +1,4 @@
+
 from __future__ import division
 from math import *
 from visual import *
@@ -34,7 +35,7 @@ while not finished:
     #print rotations
     #print t
     #print value
-    print height
+    print (height)
     if t>100:
         rotations +=1
         t = 0.1 # error correction
