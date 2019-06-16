@@ -1,0 +1,25 @@
+import serial
+import time
+
+arduinoSerialData = serial.Serial('com6', 9600)
+time.sleep(2)
+while (1 == 1):
+
+    if (arduinoSerialData.inWaiting() > 0):
+        mydata = arduinoSerialData.readline()
+        [int(filter) for filter in mydata.split() if filter.isdigit()]
+        #print filter
+        datanums = filter.split(',')
+        lidar  = (datanums[0])
+        stepper = (datanums[1])
+        lidar2 = lidar.strip("''")
+        lidar3 = float(lidar2)
+
+        stepper2 = stepper.strip("''")
+        stepper3 = float(stepper2)
+        print lidar3
+        print stepper3
+
+
+
+

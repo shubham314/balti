@@ -1,0 +1,9 @@
+from CsvBuilder import *
+
+
+
+
+for x in range(6):
+    x = x+1
+    y = CsvBuilder(x, x+6, x+9).csvCall()
+
