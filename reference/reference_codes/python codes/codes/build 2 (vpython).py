@@ -2,9 +2,10 @@ from vpython import *
 from random import random
 import serial
 import time
+import numpy as np
 
 
-arduinoSerialData = serial.Serial('com5', 9600, timeout=1)
+arduinoSerialData = serial.Serial('com7', 9600, timeout=1)
 time.sleep(2)
 
 ball=sphere(color=color.green,radius=5,make_trail=True,
@@ -37,7 +38,7 @@ while (1==1):
     datanums = myData.split(',')
     lidar = float(datanums[0])
     stepper = float(datanums[1])
-   # servo = float(datanums[2])
+    servo = float(datanums[2])
    # rank = float(datanums[3])
     print (myData)
     print (lidar)
@@ -56,11 +57,11 @@ while (1==1):
    # ball.pos.y = a*cos(omega*x)
     ball.pos.x = a*sin(d)
     ball.pos.y = a*cos(d)
-    ball.pos.z = height
+    ball.pos.z = servo  #height
     
     lastpos = ball.pos + velocity
  
-'''these lines are for the pillars first is for horizontal and second line is for vertical'''
+    #'''these lines are for the pillars first is for horizontal and second line is for vertical'''
 
     #curve(pos=[ball.pos, ball2.pos],retain =6)
     #curve(pos=[ball.pos,lastpos], thickness=1,color =color.cyan)
@@ -70,10 +71,9 @@ while (1==1):
     print (d)
     height = height + difference
     if height > 70:
-      difference = -0.5
+       difference = -0.5
     if height < 1:
         difference = 0.5
 
     if x>425:
         x = 0
- 

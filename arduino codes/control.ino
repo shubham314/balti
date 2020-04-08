@@ -34,7 +34,7 @@ UnipolarStepper myStepper(unipolar_steps, 8, 9, 10, 11);
 
 void setup()
 {
-    Serial.begin(9600);
+    Serial.begin(115200);
     myservo.attach(servo_pin);
     pinMode(lidar_trig_pin, OUTPUT); // Set pin 2 as trigger pin
     pinMode(lidar_trig_pin, INPUT); // Set pin 3 as monitor pin
@@ -71,11 +71,12 @@ int stepper_func()
     distance1=60;// lidar();
     
 Serial.print(step1);
-Serial.print("\t");
+Serial.print(",");
 Serial.print(pos);
-Serial.print("\t");
+Serial.print(",");
 Serial.println(distance1);
 
+delay(50);
   if (i==199)
     {
 pos=pos+delta;
@@ -87,6 +88,7 @@ pos=pos+delta;
     }
  
 }
+
 }
 
 

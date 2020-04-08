@@ -1,13 +1,17 @@
 from __future__ import division
 from math import *
-from visual import *
+from vpython import *
+import math
 import serial
 import time
-arduinoSerialData = serial.Serial('com6', 115200, timeout=.1)
+arduinoSerialData = serial.Serial('com7', 9600, timeout=.1)
 time.sleep(2)
 
-ball1 = sphere(pos= (35,33,0),radius = 5,color = color.green)
-ball2 = sphere(pos = (0,0,0),radius = 5,color = color.blue)
+ball1 = sphere(radius = 5,color = color.green)
+ball1.pos=vector(10,10,0)
+ball2 = sphere(radius = 5,color = color.blue)
+ball2.pos=vector(0,0,20)
+
 trail = curve(color = color.red,radius = 0.5)
 trail2 = curve(color = color.black,radius = 1)
 t= 1
@@ -16,12 +20,12 @@ omega = 0.0628/t
 rotations = 1
 height =0
 difference = 5
-finished = false
+finished = False
 while not finished:
     rate(60)
     if (arduinoSerialData.inWaiting() > 0):
         m= arduinoSerialData.readline()
-        datanums = m.split(',')
+        datanums = (m.decode('utf8')).split(',')
         value = float(datanums[0])
         height = float(datanums[1])
         rank = float(datanums[2])
@@ -38,7 +42,7 @@ while not finished:
     #print rotations
     #print t
     #print value
-    print height
+    print(height)
     if t>100:
         rotations +=1
         t = 0.1 # error correction
